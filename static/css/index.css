@@ -2,7 +2,7 @@ header{
 	height: 120px;
 	width: 100%;
 	overflow: hidden;
-	color: #fff;
+	color: #e93b3b;
 	line-height: 120px;
 	text-align: center;
 	font-size: 32px;
@@ -11,6 +11,7 @@ header h2{
 	display: inline-block;
 	position: relative;
 	z-index: 2;
+	text-shadow:6px 6px 3px #ccc;
 }
 .bg{
 	height: 120px;
@@ -18,11 +19,11 @@ header h2{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: -webkit-linear-gradient(left, red, green,red);
+	background: -webkit-linear-gradient(left, #c8faff, #f6ebd4, #c8faff);
     background-position: 0 0;
 }
 .bg:hover{
-	-webkit-animation: nav 1s linear infinite;
+	-webkit-animation: nav 2s linear infinite;
 }
 @-webkit-keyframes nav {
 	0% { 
