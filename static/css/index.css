@@ -1,0 +1,19 @@
+header{
+	height: 120px;
+	color: #fff;
+	line-height: 120px;
+	text-align: center;
+	font-size: 32px;
+	background-image: -webkit-linear-gradient(left, red, green);
+}
+header:hover{
+	-webkit-animation: 1s nav linear;
+}
+@-webkit-keyframes nav {
+	0% { 
+		background-image: -webkit-linear-gradient(left, red, green);
+	}
+	100% { 
+		background: -webkit-linear-gradient(left, green, red);
+	}
+}
