@@ -13,6 +13,9 @@ header h2{
 	z-index: 2;
 	text-shadow:6px 6px 3px #ccc;
 }
+header h2:hover{
+	/*font-size: 36px;*/
+}
 .bg{
 	height: 120px;
 	width: 1920px;
@@ -21,8 +24,6 @@ header h2{
 	left: 0;
 	background: -webkit-linear-gradient(left, #c8faff, #f6ebd4, #c8faff);
     background-position: 0 0;
-}
-.bg:hover{
 	-webkit-animation: nav 2s linear infinite;
 }
 @-webkit-keyframes nav {
