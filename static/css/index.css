@@ -6,6 +6,7 @@ header{
 	line-height: 120px;
 	text-align: center;
 	font-size: 32px;
+	position: relative;
 }
 header h2{
 	display: inline-block;
