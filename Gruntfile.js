@@ -5,9 +5,8 @@ module.exports = function(grunt) {
         copy : {
             main : {
                 files : [
-                    {expand: true, cwd :'src/', src: 'img/**', dest: 'dest/'},
-                    {expand: true, cwd :'src/', src: '*.html', dest: 'dest/'},
-                    {expand: true, cwd :'src/', src: 'lib/**', dest: 'dest/'}
+                    {expand: true, cwd :'src/', src: 'static/**', dest: ""},
+                    {expand: true, cwd :'src/', src: '*.html', dest: ''}
                 ]
             }
         },
@@ -24,7 +23,7 @@ module.exports = function(grunt) {
             dest : {
                 options : {
                     port : 8002,
-                    base : 'dest',
+                    base : '/',
                     hostname : "localhost",
                     open : false
                 }
@@ -38,45 +37,45 @@ module.exports = function(grunt) {
                 files: 'src/**/*.*'
             },
             style:{
-                files: 'src/style/*.less',
+                files: ['src/less/*/*.less','src/less/*.less',],
                 tasks: ['less']
             },
             includes : {
-                files : ['src/tpl/*.html','src/tpl/include/*.tpl'],
+                files : ['src/html/*.html','src/include/*.tpl'],
                 tasks : ['includes']
             }
         },
         less : {
             compile: {
-                options: {
-                    compress: false,
-                    yuicompress: false
-                },
-                files: {
-                  "src/index.css": "src/style/index.less"
-                }
+                files: [{
+                    expand : true,
+                    cwd : 'src/less',
+                    src : ['*.less', '!_*.less'],
+                    dest : 'src/static/css',
+                    ext : '.css'
+                }]
             }
         },
         includes : {//嵌套
             files: {
                 options: {
-                    includePath: 'src/tpl/include'
+                    includePath: 'src/include'
                 },
                 flatten: true,
                 cwd: '.',
-                src: 'src/tpl/*.html',
-                dest: 'src/' 
+                src: 'src/html/*.*',
+                dest: 'src' 
             }
         },
         useminPrepare : {
-            html: 'dest/*.html',
+            html: '*.html',
             options: {
                 root: 'src',
-                dest: 'dest'
+                dest: ''
             }
         },
         usemin:{
-            html: 'dest/*.html'
+            html: '*.html'
         },
         clean : ['.tmp']
     });
