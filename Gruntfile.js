@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         copy : {
             main : {
                 files : [
-                    {expand: true, cwd :'src/', src: 'static/**', dest: ""},
+                    {expand: true, cwd :'src/', src: ['static/img/**', 'static/lib/**'], dest: ""},
                     {expand: true, cwd :'src/', src: '*.html', dest: ''}
                 ]
             }
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             dest : {
                 options : {
                     port : 8002,
-                    base : '/',
+                    base : '',
                     hostname : "localhost",
                     open : false
                 }
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
             html: '*.html',
             options: {
                 root: 'src',
-                dest: ''
+                dest: 'static'
             }
         },
         usemin:{
