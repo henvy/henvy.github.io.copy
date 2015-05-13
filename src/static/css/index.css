@@ -539,6 +539,8 @@ header h1 {
   margin: 0 0 10px 0;
   color: #e93b3b;
   text-shadow: 6px 6px 3px #ccc;
+  display: inline-block;
+  cursor: pointer;
 }
 header p {
   font-size: 24px;
@@ -551,8 +553,10 @@ header .email {
   top: 200px;
   left: 50%;
   margin-left: -100px;
+  display: none;
 }
 header .email.h5 {
+  display: block;
   -webkit-animation: h5-header-email 2s linear;
 }
 header .bg {
