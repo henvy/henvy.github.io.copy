@@ -1,6 +1,7 @@
-function a(){
-	alert(1);
-}
-function b(){
-	alert(2);
-}
+$("#earth").windstagball({
+	radius:200,
+	speed:10
+});
+$("header h1").mouseover(function(){
+	$("header .email").addClass("h5");
+});

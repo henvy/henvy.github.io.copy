@@ -1,6 +1,26 @@
 @import "common/base.less";
 @import "common/tool.less";
 @import "common/h5name.less";
-@import "widget/index.less";
+@import "widget/header.less";
 body{
+	font-size: 14px;
+	color: @base-color;
+}
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+#earth{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	a{
+		position: absolute;
+		color: @base-color;
+		padding: 3px 6px;
+		&:hover{
+			background: #ddd;
+		}
+	}
 }

@@ -1,0 +1,48 @@
+header{
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	display: table;
+	.box-shadow(0 3px 3px #ddd);
+	.info{
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		z-index: 2;
+	}
+	h1{
+		font-size: 46px;
+		margin: 0 0 10px 0;
+		color: #e93b3b;
+		text-shadow:6px 6px 3px #ccc;
+	}
+	p{
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	.email{
+		position: absolute;
+		display: inline-block;
+		width: 200px;
+		top: 200px;
+		left: 50%;
+		margin-left: -100px;
+		&.h5{
+			-webkit-animation: h5-header-email 2s linear;
+		}
+	}
+	.bg{
+		height: 300px;
+		width: 1920px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: -webkit-linear-gradient(left, #c8faff, #f6ebd4, #c8faff);
+		background: -moz-linear-gradient(left, #c8faff, #f6ebd4, #c8faff);
+	    background-position: 0 0;
+		-webkit-animation: h5-header-bg 2s linear infinite;
+		-moz-animation: h5-header-bg 2s linear infinite;
+	}
+}

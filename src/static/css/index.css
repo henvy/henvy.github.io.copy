@@ -481,7 +481,8 @@ textarea {
 .bg-white {
   background: #fff;
 }
-@-webkit-keyframes nav {
+/*头部背景*/
+@-webkit-keyframes h5-header-bg {
   0% {
     background-position: 0 0;
   }
@@ -489,35 +490,73 @@ textarea {
     background-position: -1920px 0;
   }
 }
-@-moz-keyframes nav {
+@-moz-keyframes h5-header-bg {
   0% {
     background-position: 0 0;
   }
   100% {
     background-position: -1920px 0;
+  }
+}
+/*邮箱动画*/
+@-webkit-keyframes h5-header-email {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 200px;
+    -webkit-transform: rotate(20deg);
+  }
+  70% {
+    top: 190px;
+    -webkit-transform: rotate(-5deg);
+  }
+  100% {
+    top: 200px;
+    -webkit-transform: rotate(0deg);
   }
 }
 header {
-  height: 120px;
+  height: 300px;
   width: 100%;
   overflow: hidden;
-  color: #e93b3b;
-  line-height: 120px;
   text-align: center;
-  font-size: 32px;
   position: relative;
+  display: table;
+  -moz-box-shadow: 0 3px 3px #dddddd;
+  -o-box-shadow: 0 3px 3px #dddddd;
+  -webkit-box-shadow: 0 3px 3px #dddddd;
+  box-shadow: 0 3px 3px #dddddd;
 }
-header h2 {
-  display: inline-block;
+header .info {
   position: relative;
+  display: table-cell;
+  vertical-align: middle;
   z-index: 2;
+}
+header h1 {
+  font-size: 46px;
+  margin: 0 0 10px 0;
+  color: #e93b3b;
   text-shadow: 6px 6px 3px #ccc;
 }
-header h2:hover {
-  /*font-size: 36px;*/
+header p {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-.bg {
-  height: 120px;
+header .email {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  top: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+header .email.h5 {
+  -webkit-animation: h5-header-email 2s linear;
+}
+header .bg {
+  height: 300px;
   width: 1920px;
   position: absolute;
   top: 0;
@@ -525,6 +564,28 @@ header h2:hover {
   background: -webkit-linear-gradient(left, #c8faff, #f6ebd4, #c8faff);
   background: -moz-linear-gradient(left, #c8faff, #f6ebd4, #c8faff);
   background-position: 0 0;
-  -webkit-animation: nav 2s linear infinite;
-  -moz-animation: nav 2s linear infinite;
+  -webkit-animation: h5-header-bg 2s linear infinite;
+  -moz-animation: h5-header-bg 2s linear infinite;
+}
+body {
+  font-size: 14px;
+  color: #333333;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#earth {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+#earth a {
+  position: absolute;
+  color: #333333;
+  padding: 3px 6px;
+}
+#earth a:hover {
+  background: #ddd;
 }

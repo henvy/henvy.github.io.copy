@@ -1,4 +1,5 @@
-@-webkit-keyframes nav {
+/*头部背景*/
+@-webkit-keyframes h5-header-bg {
 	0% { 
 		background-position: 0 0;
 	}
@@ -6,11 +7,29 @@
 		background-position: -1920px 0;
 	}
 }
-@-moz-keyframes nav {
+@-moz-keyframes h5-header-bg {
 	0% { 
 		background-position: 0 0;
 	}
 	100% { 
 		background-position: -1920px 0;
+	}
+}
+/*邮箱动画*/
+@-webkit-keyframes h5-header-email {
+	0% { 
+		top: 0px;
+	}
+	50% {
+		top: 200px;
+		-webkit-transform: rotate(20deg);
+	}
+	70% {
+		top: 190px;
+		-webkit-transform: rotate(-5deg);
+	}
+	100% { 
+		top: 200px;
+		-webkit-transform: rotate(0deg);
 	}
 }
