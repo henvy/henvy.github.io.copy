@@ -457,29 +457,16 @@ textarea {
 .text-right {
   text-align: right!important;
 }
-.dark-red {
-  color: #cd454c;
-}
 .blod {
   font-weight: 700;
 }
-.border-b {
-  border-bottom: 1px solid #ddd;
-}
-.bg-grey {
-  background: #f7f9fb;
-}
-.mb-20 {
-  margin-bottom: 20px;
-}
-.pt-20 {
-  padding-top: 20px;
-}
-.pb-20 {
-  padding-bottom: 20px;
-}
-.bg-white {
-  background: #fff;
+@media screen and (max-width: 640px) {
+  .earth-temp {
+    display: block!important;
+  }
+  .earth {
+    display: none!important;
+  }
 }
 /*头部背景*/
 @-webkit-keyframes h5-header-bg {
@@ -533,6 +520,18 @@ textarea {
     -moz-transform: rotate(0deg);
   }
 }
+/*小屏情况下earth-temp动画*/
+@-webkit-keyframes h5-earth-temp {
+  10% {
+    padding-left: 12px;
+    color: #0082ce;
+  }
+  100% {
+    padding-left: 10px;
+    color: #68c7ff;
+    -webkit-transform: rotate(0deg);
+  }
+}
 header {
   height: 300px;
   width: 100%;
@@ -544,6 +543,7 @@ header {
   -o-box-shadow: 0 3px 3px #dddddd;
   -webkit-box-shadow: 0 3px 3px #dddddd;
   box-shadow: 0 3px 3px #dddddd;
+  margin-bottom: 20px;
 }
 header .info {
   position: relative;
@@ -597,17 +597,37 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
-#earth {
+.earth {
   position: relative;
   width: 500px;
   height: 500px;
   margin: 0 auto;
 }
-#earth a {
+.earth a {
   position: absolute;
   color: #333333;
   padding: 3px 6px;
 }
-#earth a:hover {
+.earth a:hover {
   background: #ddd;
+}
+.earth-temp {
+  display: none;
+  padding: 0 15px;
+}
+.earth-temp ul li {
+  margin-bottom: 3px;
+}
+.earth-temp ul li a {
+  display: block;
+  line-height: 26px;
+  color: #333333;
+  border-left: 3px solid transparent;
+  padding-left: 6px;
+  background: #eee;
+}
+.earth-temp ul li a:hover {
+  border-left: 3px solid #0082ce;
+  -webkit-animation: h5-earth-temp 1s linear forwards;
+  -moz-animation: h5-earth-temp 1s linear forwards;
 }

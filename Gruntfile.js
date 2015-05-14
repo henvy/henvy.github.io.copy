@@ -71,7 +71,7 @@ module.exports = function(grunt) {
             html: '*.html',
             options: {
                 root: 'src',
-                dest: 'static'
+                dest: './'
             }
         },
         usemin:{

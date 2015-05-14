@@ -1,5 +1,6 @@
 @import "common/base.less";
 @import "common/tool.less";
+@import "common/media.less";
 @import "common/h5name.less";
 @import "widget/header.less";
 body{
@@ -10,7 +11,7 @@ body{
 	max-width: 1000px;
 	margin: 0 auto;
 }
-#earth{
+.earth{
 	position: relative;
 	width: 500px;
 	height: 500px;
@@ -21,6 +22,28 @@ body{
 		padding: 3px 6px;
 		&:hover{
 			background: #ddd;
+		}
+	}
+}
+.earth-temp{
+	display: none;
+	padding: 0 15px;
+	ul{
+		li{
+			margin-bottom: 3px;
+			a{
+				display: block;
+				line-height: 26px;
+				color: @base-color;
+				border-left: 3px solid transparent;
+				padding-left: 6px;
+				background: #eee;
+				&:hover{
+					border-left: 3px solid @blue;
+					-webkit-animation: h5-earth-temp 1s linear forwards;
+					-moz-animation: h5-earth-temp 1s linear forwards;
+				}
+			}
 		}
 	}
 }
