@@ -627,6 +627,7 @@ body {
   background: #eee;
 }
 .earth-temp ul li a:hover {
+  background: #fbfbfb;
   border-left: 3px solid #0082ce;
   -webkit-animation: h5-earth-temp 1s linear forwards;
   -moz-animation: h5-earth-temp 1s linear forwards;
