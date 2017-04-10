@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 hostname : "localhost",
                 livereload: true,
                 open : true
-            },  
+            },    
             livereload: {
             },
             dest : {
